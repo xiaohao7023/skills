@@ -16,23 +16,33 @@
 
 此 Skill 需要 **Accessibility** 权限才能模拟键盘输入。
 
-**授权步骤：**
+#### 方法 1：触发系统弹窗（推荐，最简单）
+
+1. 在终端运行以下命令：
+   ```bash
+   osascript -e 'tell application "System Events" to keystroke space using command down'
+   ```
+2. 系统会弹出提示：**"OneClaw"想控制这台电脑**
+3. 点击 **打开系统设置**
+4. 确保 **OneClaw** 的勾选框为 **选中状态**
+
+#### 方法 2：手动添加
+
+如果方法 1 没有弹出提示：
 
 1. 打开 **系统设置 → 隐私与安全性 → 辅助功能**
 2. 点击左下角的 **+** 按钮
-3. 在弹出的文件选择器中，按 `Cmd + Shift + G`，输入路径：
+3. 按 `Cmd + Shift + G`，输入路径：
    ```
    /Applications/OneClaw.app/Contents/MacOS/
    ```
-   然后按回车
-4. 选择 **OneClaw**（不是 openclaw-gateway）并点击 **打开**
-5. 确保列表中 **OneClaw** 的勾选框为 **选中状态**
+4. 选择 **OneClaw** 并点击 **打开**
+5. 确保勾选框为 **选中状态**
 
-**💡 提示**：如果按 `Cmd + Shift + G` 后提示路径不存在，可以手动导航到：
-- 点击左侧【应用程序】
-- 找到并右键【OneClaw】→【显示包内容】
-- 进入 `Contents → MacOS`
-- 选择 `OneClaw` 文件
+**💡 如果找不到 OneClaw**：
+- 在 Finder 中按 `Cmd+Shift+A` 打开应用程序文件夹
+- 搜索框输入 `OneClaw`
+- 或右键 OneClaw → 显示包内容 → Contents/MacOS/OneClaw
 
 **验证授权：**
 ```bash

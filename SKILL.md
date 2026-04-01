@@ -13,25 +13,29 @@ Execute keyboard shortcuts on macOS programmatically.
 
 This skill requires **Accessibility** permission to simulate keyboard input.
 
-**⚠️ Important:** If running through OpenClaw, you need to grant permission to `OneClaw` (the main application, not openclaw-gateway).
+#### Method 1: Trigger System Prompt (Recommended)
 
-**First-time setup:**
+1. Run this command in terminal:
+   ```bash
+   osascript -e 'tell application "System Events" to keystroke space using command down'
+   ```
+2. When prompted **"OneClaw wants to control your computer"**, click **Open System Settings**
+3. Ensure **OneClaw** is **checked** in the list
+
+#### Method 2: Manual Add
+
+If Method 1 doesn't work:
+
 1. Go to **System Settings → Privacy & Security → Accessibility**
 2. Click the **+** button
 3. Press `Cmd+Shift+G` and type: `/Applications/OneClaw.app/Contents/MacOS/`
 4. Select **OneClaw** and click **Open**
-5. Ensure the checkbox next to **OneClaw** is **checked**
+5. Ensure the checkbox is **checked**
 
-**Alternative method if path doesn't work:**
-1. In the file picker, click **Applications** in the sidebar
-2. Right-click **OneClaw** → **Show Package Contents**
-3. Navigate to `Contents → MacOS`
-4. Select the `OneClaw` file
-
-**Alternative method:**
-1. Run any shortcut command
-2. When system prompts "OneClaw wants to control your computer"
-3. Click **Open System Settings** and grant permission
+**💡 Can't find OneClaw?**
+- Press `Cmd+Shift+A` in Finder to open Applications
+- Search for `OneClaw` in the search box
+- Or right-click OneClaw → Show Package Contents → Contents/MacOS/OneClaw
 
 **Verify permissions:**
 ```bash
@@ -137,7 +141,7 @@ openclaw skills run shortcut-runner --keys "ctrl,c" --target "Terminal"
 ## Troubleshooting
 
 ### "Not authorized" error
-Grant Accessibility permission in System Settings to **OneClaw** (not openclaw-gateway).
+Grant Accessibility permission to **OneClaw** using Method 1 above.
 
 ### Keys not working
 - Ensure target application is active (use `--target` or activate manually)
