@@ -20,12 +20,19 @@
 
 1. 打开 **系统设置 → 隐私与安全性 → 辅助功能**
 2. 点击左下角的 **+** 按钮
-3. 按 `Cmd + Shift + G`，输入路径：
+3. 在弹出的文件选择器中，按 `Cmd + Shift + G`，输入路径：
    ```
    /Applications/OneClaw.app/Contents/MacOS/
    ```
-4. 选择 **openclaw-gateway** 并添加
-5. 确保勾选框为 **选中状态**
+   然后按回车
+4. 选择 **OneClaw**（不是 openclaw-gateway）并点击 **打开**
+5. 确保列表中 **OneClaw** 的勾选框为 **选中状态**
+
+**💡 提示**：如果按 `Cmd + Shift + G` 后提示路径不存在，可以手动导航到：
+- 点击左侧【应用程序】
+- 找到并右键【OneClaw】→【显示包内容】
+- 进入 `Contents → MacOS`
+- 选择 `OneClaw` 文件
 
 **验证授权：**
 ```bash

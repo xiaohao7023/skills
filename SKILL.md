@@ -13,18 +13,24 @@ Execute keyboard shortcuts on macOS programmatically.
 
 This skill requires **Accessibility** permission to simulate keyboard input.
 
-**⚠️ Important:** If running through OpenClaw, you need to grant permission to `openclaw-gateway`.
+**⚠️ Important:** If running through OpenClaw, you need to grant permission to `OneClaw` (the main application, not openclaw-gateway).
 
 **First-time setup:**
 1. Go to **System Settings → Privacy & Security → Accessibility**
 2. Click the **+** button
 3. Press `Cmd+Shift+G` and type: `/Applications/OneClaw.app/Contents/MacOS/`
-4. Select `openclaw-gateway` and click **Open**
-5. Ensure the checkbox next to `openclaw-gateway` is **checked**
+4. Select **OneClaw** and click **Open**
+5. Ensure the checkbox next to **OneClaw** is **checked**
+
+**Alternative method if path doesn't work:**
+1. In the file picker, click **Applications** in the sidebar
+2. Right-click **OneClaw** → **Show Package Contents**
+3. Navigate to `Contents → MacOS`
+4. Select the `OneClaw` file
 
 **Alternative method:**
 1. Run any shortcut command
-2. When system prompts "openclaw-gateway wants to control your computer"
+2. When system prompts "OneClaw wants to control your computer"
 3. Click **Open System Settings** and grant permission
 
 **Verify permissions:**
@@ -131,7 +137,7 @@ openclaw skills run shortcut-runner --keys "ctrl,c" --target "Terminal"
 ## Troubleshooting
 
 ### "Not authorized" error
-Grant Accessibility permission in System Settings.
+Grant Accessibility permission in System Settings to **OneClaw** (not openclaw-gateway).
 
 ### Keys not working
 - Ensure target application is active (use `--target` or activate manually)
