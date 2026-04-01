@@ -35,6 +35,21 @@
     "screenshot-full": {
       "keys": ["cmd", "shift", "3"],
       "description": "Screenshot full screen"
+    },
+    "feishu-search": {
+      "keys": ["cmd", "k"],
+      "description": "飞书搜索 (Cmd+K)",
+      "target": "Lark"
+    },
+    "feishu-paste": {
+      "keys": ["cmd", "v"],
+      "description": "飞书粘贴",
+      "target": "Lark"
+    },
+    "feishu-send": {
+      "keys": ["return"],
+      "description": "飞书发送消息",
+      "target": "Lark"
     }
   }
 }
