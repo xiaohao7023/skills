@@ -1,0 +1,40 @@
+{
+  "shortcuts": {
+    "copy": {
+      "keys": ["cmd", "c"],
+      "description": "Copy to clipboard"
+    },
+    "paste": {
+      "keys": ["cmd", "v"],
+      "description": "Paste from clipboard"
+    },
+    "cut": {
+      "keys": ["cmd", "x"],
+      "description": "Cut to clipboard"
+    },
+    "undo": {
+      "keys": ["cmd", "z"],
+      "description": "Undo last action"
+    },
+    "redo": {
+      "keys": ["cmd", "shift", "z"],
+      "description": "Redo last action"
+    },
+    "select-all": {
+      "keys": ["cmd", "a"],
+      "description": "Select all"
+    },
+    "save": {
+      "keys": ["cmd", "s"],
+      "description": "Save file"
+    },
+    "screenshot": {
+      "keys": ["cmd", "shift", "4"],
+      "description": "Screenshot selection"
+    },
+    "screenshot-full": {
+      "keys": ["cmd", "shift", "3"],
+      "description": "Screenshot full screen"
+    }
+  }
+}
